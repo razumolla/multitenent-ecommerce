@@ -1,19 +1,29 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRightIcon } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Progress } from "@/components/ui/progress";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-2xl bg-fuchsia-300">Welcome to Ecom-Web</h1>
-      <p>This is a simple starter kit for your next ecommerce project.</p>
-      <Button variant="outline">Get Started</Button>
-      <Button variant="secondary" size="icon" className="size-8">
-        <ChevronRightIcon />
-      </Button>
+    <div className="flex  flex-col min-h-screen gap-y-4 p-4">
+      <div>
+        <Button variant="elevated">I am Button</Button>
+      </div>
 
-      <h1>Features</h1>
+      <div>
+        <Input type="text" placeholder="Input data" />
+      </div>
 
-      <Button variant="link">Next.js</Button>
+      <div>
+        <p>Welcome to your multitenant ecommerce app.</p>
+        <p>Welcome to your multitenant ecommerce app.</p>
+        <p>Welcome to your multitenant ecommerce app.</p>
+        <Checkbox>Checkbox</Checkbox>
+      </div>
+
+      <Progress value={50} max={100} />
+      <Textarea placeholder="This is description" />
     </div>
   );
 }
